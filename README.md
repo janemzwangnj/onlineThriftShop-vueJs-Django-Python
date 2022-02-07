@@ -1,7 +1,8 @@
 # OnlineThriftShop
 #### Date: 2/7/2022
+#### Due: 2/14/2022
 #### By: Jane Mingzhen Wang
-#### [Linkedin](https://www.linkedin.com/in/janemzwangnj)|[GitHub](https://github.com/janemzwangnj)|[Website]()
+#### [Linkedin](https://www.linkedin.com/in/janemzwangnj)|[GitHub](https://github.com/janemzwangnj)|[Website]()|[Trello]()
 ***
 ## *Description*
 The project of online thrift shop is trying to build a website for a local community, like people in a same city, or students in a college or university, to sell the items they don't like anymore but reusable for others. 
@@ -26,6 +27,8 @@ Component Heriarchy Diagram(CHD):
 Entity Relationship Diagram(ERD):
 
 ![ERD](thrift.drawio.png)
+
+[Trello]()
 ***
 ## *Future Updated*
 - Customer authentication
