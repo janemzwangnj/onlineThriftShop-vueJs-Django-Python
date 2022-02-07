@@ -13,7 +13,7 @@ The application will be implemented with a Vue frontend, a Python/Django backend
 ***
 ## *Technologies Used*
   * Vue.js
-   ![vue](vue.png)
+   ![vue](vue.png) ![python](python3.png)
   * Python3
   * Django
   * Postgres
