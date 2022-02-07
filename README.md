@@ -12,7 +12,7 @@ The website lets people sign up as a customer of APP to sell their old items and
 The application will be implemented with a Vue frontend, a Python/Django backend, and Postgres database.  
 ***
 ## *Technologies Used*
-  * Vue.js [](vue.png)
+  * Vue.js [vue](vue.png)
   * Python3
   * Django
   * Postgres
