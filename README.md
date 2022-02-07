@@ -17,6 +17,7 @@ The application will be implemented with a Vue frontend, a Python/Django backend
   * Postgres
 ***
 ## *Getting Started*
+I started with Whimsical to map out componenents heriarchy diagram(CHD). This will give me ideas which components need to create and how the components are liked. Then using dre
 
 ***
 ## *Future Updated*
