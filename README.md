@@ -18,9 +18,14 @@ The application will be implemented with a Vue frontend, a Python/Django backend
 ***
 ## *Getting Started*
 I started with Whimsical to map out componenents heriarchy diagram(CHD) for the frontend. This will give me ideas which components need to create and how the components are liked. Then using Drawio, I draw the entity relationship diagram (ERD) to create the models which are needed in the database for the backend. The last step before the coding was to create a Trello board to detail each steps needed on the frontend, the backend and the eventual styling. 
-[CHD]()
 
-![ERD](thrift.drew.in)
+Component Heriarchy Diagram(CHD):
+
+![CHD]()
+
+Entity Relationship Diagram(ERD):
+
+![ERD](thrift.drawio.png)
 ***
 ## *Future Updated*
 - Customer authentication
