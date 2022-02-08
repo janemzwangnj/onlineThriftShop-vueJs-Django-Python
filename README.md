@@ -15,7 +15,7 @@ The application will be implemented with a Vue frontend, a Python/Django backend
   * Vue.js
    ![vue](vue.png) ![python](python3.png)
   * Python3
-  * Django
+  * Django ![django](django.png)
   * Postgres
 ***
 ## *Getting Started*
