@@ -12,8 +12,8 @@ The website lets people sign up as a customer of APP to sell their old items and
 The application will be implemented with a Vue frontend, a Python/Django backend, and Postgres database.  
 ***
 ## *Technologies Used*
-  * Vue.js ![vue](vue.png) 
-  * Python3 ![python](python3.png)
+  * Vue.js ![vue](images/vue.png) 
+  * Python3 ![python](images/python3.png)
   * Django ![django](django.png)
   * Postgres ![postgres](postgres.png)
 ***
@@ -26,7 +26,7 @@ Component Heriarchy Diagram(CHD):
 
 Entity Relationship Diagram(ERD):
 
-![ERD](thrift.drawio.png)
+![ERD](images/thrift.drawio.png)
 
 [Trello]()
 ***
