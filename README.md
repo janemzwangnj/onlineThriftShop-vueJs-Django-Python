@@ -14,8 +14,8 @@ The application will be implemented with a Vue frontend, a Python/Django backend
 ## *Technologies Used*
   * Vue.js ![vue](images/vue.png) 
   * Python3 ![python](images/python3.png)
-  * Django ![django](django.png)
-  * Postgres ![postgres](postgres.png)
+  * Django ![django](images/django.png)
+  * Postgres ![postgres](images/postgres.png)
 ***
 ## *Getting Started*
 I started with Whimsical to map out componenents heriarchy diagram(CHD) for the frontend. This will give me ideas which components need to create and how the components are liked. Then using Drawio, I draw the entity relationship diagram (ERD) to create the models which are needed in the database for the backend. The last step before the coding was to create a Trello board to detail each steps needed on the frontend, the backend and the eventual styling. 
