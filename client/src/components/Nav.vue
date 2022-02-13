@@ -1,11 +1,16 @@
 <template>
+  <div class="nav">
+  <h2>
+  Local Online Thrift Store
+  </h2>
   <nav>
     <!-- Nav Links Go Here -->
     <router-link to="/" name="Home">Home</router-link>
     <router-link to="/items" name="Items">Items</router-link>
-    <router-link to="/users/:id" name="Login">Login</router-link>
-    <router-link to="/users" name="SignUp">SignUp</router-link> 
+    <router-link to="/login" name="Login">Login</router-link>
+    <router-link to="/signup" name="SignUp">SignUp</router-link> 
   </nav>
+  </div>
 </template>
 
 <script>
@@ -18,11 +23,12 @@ export default {
 .router-link-exact-active {
   color: #fff;
 }
-nav {
+.nav {
   background: #8bbba5;
-  padding: 1em;
+  padding: 0 1em; 
   display: flex;
-  justify-content: right;
+  justify-content:space-around;
+  align-items: center;
 }
 nav a {
   margin: 1em;

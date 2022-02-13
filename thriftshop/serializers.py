@@ -8,9 +8,9 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         many=True,
         read_only=True
     )
-    shopcard = serializers.ModelSerializer.serializer_url_field(
+    card = serializers.HyperlinkedRelatedField(
         view_name='shopcard_detail',
-        read_only=True
+        queryset=Shopcard.objects.all(), required=False, allow_null=True
     )
 
     user_url = serializers.ModelSerializer.serializer_url_field(
@@ -19,7 +19,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('id', 'user_url', 'name', 'password', 'email',
-                  'phone_number', 'address', 'shopcard', 'items')
+                  'phone_number', 'address', 'card', 'items')
 
 
 class ItemSerializer(serializers.HyperlinkedModelSerializer):

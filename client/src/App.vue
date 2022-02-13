@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav />
-    <main>hello from App.vue
+    <main>
       <router-view header="test"></router-view>
     </main>
     <Footer />
@@ -23,7 +23,6 @@ export default {
 <style>
 html {
   background-color: #a4aad3;
-  height: 100%;
 }
 
 #app {
@@ -34,13 +33,8 @@ html {
   color: #2c3e50;
   background: #bbcbde;
   margin-top: 10px; 
-  margin-bottom: 10px; 
-  /* position:fixed;
-    top:55;
-    bottom:0;
-    left:0;
-    right:0; */
-    height: 100%;
+  margin-bottom: 10px;
+  min-height: 100vh;
 
 }
 
@@ -50,12 +44,7 @@ body {
   /* height: 100%; */
 }
 main {
-  padding: 1em 0;
-  /* position:fixed;
-    top:55;
-    bottom:65;
-    left:0;
-    right:0; */
-    height: 100%;
+    min-height: 80vh;
+    margin-bottom: 1rem;
 }
 </style>

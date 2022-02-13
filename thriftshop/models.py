@@ -31,7 +31,7 @@ class Item(models.Model):
     origin_purchasing_time = models.DateField(blank=True)
     origin_price = models.CharField(blank=True, max_length=100)
     condition = models.CharField(blank=True, max_length=100, null=True)
-    image = models.CharField(max_length=100, blank=True)
+    image = models.TextField(blank=True)
     asking_price = models.CharField(blank=True, max_length=100)
     sold_mark = models.BooleanField(blank=True)
 

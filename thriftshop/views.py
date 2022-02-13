@@ -13,6 +13,15 @@ class UserDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = UserSerializer
 
 
+class Login(generics.RetrieveUpdateDestroyAPIView):
+    serializer_class = UserSerializer
+    # lookup_url_kwarg = 'email'
+    lookup_field = 'email'
+
+    def get_queryset(self):
+        return User.objects.filter()
+
+
 class ItemList(generics.ListCreateAPIView):
     queryset = Item.objects.all()
     serializer_class = ItemSerializer
