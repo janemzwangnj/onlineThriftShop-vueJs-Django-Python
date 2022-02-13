@@ -1,0 +1,1 @@
+web: gunicorn onlineThriftShop.wsgi
