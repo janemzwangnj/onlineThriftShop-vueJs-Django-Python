@@ -1,1 +1,1 @@
-web: gunicorn onlineThriftShop.wsgi
+web: gunicorn thriftshop_django.wsgi
