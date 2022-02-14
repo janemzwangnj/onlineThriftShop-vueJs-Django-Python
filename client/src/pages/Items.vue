@@ -27,7 +27,7 @@ export default {
     },
   methods:{
     async getItems() {
-      const res = await axios.get('http://localhost:8000/items')
+      const res = await axios.get('https://mysterious-lake-42419.herokuapp.com/items/')
       this.items = res.data
     },
     navigateItem(id){

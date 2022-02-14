@@ -16,7 +16,10 @@
         </div>
         <div v-else>
           <strong>Sold: [ x ]</strong> 
-        </div>
+        </div> <br>
+        <button class="new" @click="addItem">New Item</button>
+        <button class="update">Update Item</button>
+        <button class="delete">Delete Item</button>
     </section>
   </div>
 </template>
@@ -34,8 +37,11 @@ export default {
   methods: {
     async getItemView() {   
       const itemId = this.$route.params.item_id
-      const res = await axios.get(`http://localhost:8000/items/${itemId}`)
+      const res = await axios.get(`https://mysterious-lake-42419.herokuapp.com/items/${itemId}`)
       this.itemView = res.data
+    },
+    addItem(){
+      this.$router.push('/additem')
     }
   }
 }
@@ -53,5 +59,18 @@ export default {
 }
 h4 {
   margin: 0 auto;
+}
+.new {
+  background-color: #a1a6c0;
+  border-radius: 10px;
+  border: 1px solid #07070b
+}
+.update {
+  background-color: rgb(162, 219, 162);
+  border-radius: 10px;
+}
+.delete {
+  background-color: rgb(210, 155, 166);
+  border-radius: 10px;
 }
 </style>

@@ -3,6 +3,13 @@
     <form v-on:submit="handleSubmit">
       <input
         @input="handleChange"
+        placeholder="user_id"
+        :value="user_id"
+        name="user_id"
+        type="user_id"
+      />
+      <input
+        @input="handleChange"
         placeholder="Name"
         :value="name"
         name="name"
@@ -10,19 +17,40 @@
       />
       <input
         @input="handleChange"
-        placeholder="Email"
-        :value="email"
-        name="email"
-        type="email"
+        placeholder="Asking Price"
+        :value="asking_price"
+        name="asking_price"
+        type="asking_price"
       />
       <input
         @input="handleChange"
-        placeholder="Password"
-        :value="password"
-        name="password"
-        type="password"
+        placeholder="Condition"
+        :value="condition"
+        name="condition"
+        type="condition"
       />
-      <button :disabled="!email || !password">Sign Up</button>
+      <input
+        @input="handleChange"
+        placeholder="Origin Purchasing Date"
+        :value="origin_purchasing_time"
+        name="origin_purchasing_time"
+        type="origin_purchasing_time"
+      />
+      <input
+        @input="handleChange"
+        placeholder="Origin Price"
+        :value="origin_price"
+        name="origin_price"
+        type="origin_price"
+      />
+      <input
+        @input="handleChange"
+        placeholder="Image"
+        :value="image"
+        name="image"
+        type="image_link"
+      />
+      <button :disabled="!name || !asking_price">Add</button>
     </form>
   </div>
 </template>
@@ -30,11 +58,15 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'SignUp',
+  name: 'AddItem',
   data: ()=>({
+      user_id: 0,
       name: "",
-      email: "",
-      password: ""
+      asking_price: "",
+      condition: "",
+      origin_purchasing_time:"",
+      origin_price: "",
+      image:""
   }) ,
   methods: {
     handleChange(e) {
@@ -42,13 +74,18 @@ export default {
     },
     handleSubmit(e) {
       e.preventDefault()
-      let user = {"name":this.name,"email":this.email,"password":this.password}
-      axios.post('https://mysterious-lake-42419.herokuapp.com/users/', user);
-      // axios.post('http://localhost:8000/users/', user);
-      this.name= '' ;
-      this.email='';
-      this.password='';
-      this.$router.push('/login')
+      let item = {"user_id":this.user_id,"name":this.name,"asking_price":this.asking_price,
+      "condition":this.condition, "origin_purchasing_time":this.origin_purchasing_time,
+      "origin_price":this.origin_price,"image":this.image}
+      axios.post('https://mysterious-lake-42419.herokuapp.com/items/', item);
+      this.user_id= 0;
+      this.name= "";
+      this.asking_price= "";
+      this.condition= "";
+      this.origin_purchasing_time="";
+      this.origin_price= "";
+      this.image="";
+      this.$router.push('/items')
     }
   }
 }
