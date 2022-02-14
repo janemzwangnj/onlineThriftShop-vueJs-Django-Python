@@ -2,7 +2,7 @@
   <div id="app">
     <Nav />
     <main>
-      <router-view header="test"></router-view>
+      <router-view header="onlineThriftShop"></router-view>
     </main>
     <Footer />
   </div>

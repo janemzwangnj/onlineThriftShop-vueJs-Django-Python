@@ -6,7 +6,7 @@
 
 #### By: Jane Mingzhen Wang
 
-#### [Linkedin](https://www.linkedin.com/in/janemzwangnj)|[GitHub](https://github.com/janemzwangnj)|[Website]()|[Trello]()
+#### [Linkedin](https://www.linkedin.com/in/janemzwangnj)|[GitHub](https://github.com/janemzwangnj/onlineThriftShop)|[Website](https://jane-thriftshop.surge.sh/)|[Trello](https://trello.com/b/ckEhoG2u/onlinethriftshop)
 
 ---
 
@@ -36,13 +36,13 @@ I started with Whimsical to map out componenents heriarchy diagram(CHD) for the 
 
 Component Heriarchy Diagram(CHD):
 
-![CHD]()
+![CHD](images/CHD.png)
 
 Entity Relationship Diagram(ERD):
 
 ![ERD](images/thrift.drawio.png)
 
-[Trello]()
+[Trello](https://trello.com/b/ckEhoG2u/onlinethriftshop)
 
 ---
 
