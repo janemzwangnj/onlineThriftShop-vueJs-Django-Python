@@ -57,7 +57,7 @@
         name="sold_mark"
         type="sold_mark"
       />
-      <button :disabled="!name || !asking_price">Add</button>
+      <button :disabled="!name || !asking_price">Update</button>
     </form>
   </div>
 </template>
@@ -65,7 +65,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'AddItem',
+  name: 'UpdateItem',
   data: ()=>({
       user_id: "",
       name: "",
@@ -74,9 +74,27 @@ export default {
       origin_purchasing_time:"",
       origin_price: "",
       image:"",
-      sold_mark: false
+      sold_mark: false,
+      itemId: null
   }) ,
+  mounted() {
+    this.getItemView()
+  },
   methods: {
+    async getItemView() {   
+      this.itemId = this.$route.params.item_id
+      const res = await axios.get(`https://mysterious-lake-42419.herokuapp.com/items/${this.itemId}`)
+      // const res = await axios.get(`http://localhost:8000/items/${itemId}`)
+      // this.itemView = res.data
+      this.user_id= res.data.user_id;
+      this.name= res.data.name;
+      this.asking_price= res.data.asking_price;
+      this.condition= res.data.condition;
+      this.origin_purchasing_time=res.data.origin_purchasing_time;
+      this.origin_price= res.data.origin_price;
+      this.image=res.data.image;
+      this.sold_mark=res.data.sold_mark
+    },
     handleChange(e) {
       this[e.target.name] = e.target.value
     },
@@ -85,8 +103,8 @@ export default {
       let item = {"user_id":this.user_id,"name":this.name,"asking_price":this.asking_price,
       "condition":this.condition, "origin_purchasing_time":this.origin_purchasing_time,
       "origin_price":this.origin_price,"image":this.image, "sold_mark":this.sold_mark}
-      axios.post('https://mysterious-lake-42419.herokuapp.com/items/', item);
-      // axios.post('http://localhost:8000/items/', item);
+      axios.put(`https://mysterious-lake-42419.herokuapp.com/items/${this.itemId}`, item);
+      // axios.put(`http://localhost:8000/items/${this.itemId}`, item);
       this.user_id= 0;
       this.name= "";
       this.asking_price= "";
@@ -95,7 +113,7 @@ export default {
       this.origin_price= "";
       this.image="";
       this.sold_mark=false
-      this.$router.push('/items')
+      this.$router.push(`/items`)
     }
   }
 }

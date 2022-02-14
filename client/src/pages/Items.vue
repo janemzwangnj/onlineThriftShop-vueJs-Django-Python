@@ -5,10 +5,10 @@
         <div :key="item.id" v-for="item in items" @click="navigateItem(item.id)">
           <!-- <ItemCard :item="item"/> -->
           <div class="image-wrapper">
-          <img alt="item" :src="item.image" width="300" height="200">
-          <h4>Item: {{item.name}}</h4>
-          <h4>Asking Price: {{item.asking_price}}</h4>
-          <h4>Condition: {{item.condition}}</h4>
+          <img alt="item" :src="item.image" width="300" height="200"><br>
+          <strong> {{item.name}}</strong><br>
+          Asking Price:<strong> {{item.asking_price}}</strong><br>
+          Condition: <strong>{{item.condition}}</strong>
           </div>
         </div>
       </section>

@@ -7,19 +7,19 @@
     </section>
     <section class="details">
         <strong>{{itemView.name}}</strong> <br>
-        <strong>Asking Price: </strong>{{itemView.asking_price}} <br>
-        <strong>Condition: </strong>{{itemView.condition}} <br>
-        <strong>Origin Purchasing Date: </strong>{{itemView.origin_purchasing_time}}<br>
-        <strong>Origin Price: </strong>{{itemView.origin_price}}<br>
+        Asking Price: <strong>{{itemView.asking_price}}</strong> <br>
+        Condition:<strong> {{itemView.condition}}</strong> <br>
+        Origin Purchasing Date:<strong> {{itemView.origin_purchasing_time}}</strong><br>
+        Origin Price: <strong>{{itemView.origin_price}}</strong><br>
         <div v-if="itemView.sold_mark">
-            <strong>Sold: [ ✔️ ]</strong> 
+          Sold:  <strong>[ ✔️ ]</strong> 
         </div>
         <div v-else>
-          <strong>Sold: [ x ]</strong> 
+          Sold:<strong> [   ]</strong> 
         </div> <br>
         <button class="new" @click="addItem">New Item</button>
-        <button class="update">Update Item</button>
-        <button class="delete">Delete Item</button>
+        <button class="update" @click="updateItem">Update Item</button>
+        <button class="delete" @click="deleteItem">Delete Item</button>
     </section>
   </div>
 </template>
@@ -29,19 +29,28 @@ import axios from 'axios'
 export default {
   name: 'ItemView',
   data: () => ({
-    itemView: null
+    itemView: null,
+    itemId: null
   }),
   mounted() {
     this.getItemView()
   },
   methods: {
     async getItemView() {   
-      const itemId = this.$route.params.item_id
-      const res = await axios.get(`https://mysterious-lake-42419.herokuapp.com/items/${itemId}`)
+      this.itemId = this.$route.params.item_id
+      const res = await axios.get(`https://mysterious-lake-42419.herokuapp.com/items/${this.itemId}`)
       this.itemView = res.data
     },
     addItem(){
       this.$router.push('/additem')
+    },
+    updateItem(){
+      this.$router.push(`/updateitem/${this.itemId}`)
+    },
+    deleteItem(){
+    axios.delete(`https://mysterious-lake-42419.herokuapp.com/items/${this.itemId}`);
+    // axios.delete(`http://localhost:8000/items/${this.itemId}`);
+    this.$router.push('/items')
     }
   }
 }
@@ -56,6 +65,9 @@ export default {
   align-items: center;
   margin: 20px;
 
+}
+.details {
+  text-align: left;
 }
 h4 {
   margin: 0 auto;
