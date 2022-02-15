@@ -57,3 +57,11 @@ Screenshots
 - Add oneline payment
 - Add shipping component
 - Trading history and customer reivews
+
+---
+
+## _Resourcses_
+
+- [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
+- [Deploying Django](https://github.com/SEI-R-11-8/deploying-django)
+- [Deploying Vue App with Surge](https://udemezue.medium.com/how-to-deploy-a-vue-js-application-with-surge-86614220392c)
