@@ -44,7 +44,7 @@ Entity Relationship Diagram(ERD):
 
 [Trello](https://trello.com/b/ckEhoG2u/onlinethriftshop)
 
-Screen Shots
+Screenshots
 ![HomePage](images/home.png)
 
 ![ItemList](images/items.png)
