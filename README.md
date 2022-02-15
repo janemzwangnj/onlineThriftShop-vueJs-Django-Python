@@ -65,3 +65,5 @@ Screenshots
 - [The Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - [Deploying Django](https://github.com/SEI-R-11-8/deploying-django)
 - [Deploying Vue App with Surge](https://udemezue.medium.com/how-to-deploy-a-vue-js-application-with-surge-86614220392c)
+- [Vue+Django](https://betterprogramming.pub/vue-django-using-vue-files-and-the-vue-cli-d6dd8c9145eb)
+- [Django REST Framework](https://github.com/SEI-R-11-8/u4_django_rest_api)
