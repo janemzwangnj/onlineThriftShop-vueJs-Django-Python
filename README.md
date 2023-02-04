@@ -6,7 +6,7 @@
 
 #### By: Jane Mingzhen Wang
 
-#### [Linkedin](https://www.linkedin.com/in/janemzwangnj)|[GitHub](https://github.com/janemzwangnj/onlineThriftShop)|[Website](https://jane-thriftshop.surge.sh/)|[Trello](https://trello.com/b/ckEhoG2u/onlinethriftshop)
+<! --- #### [Linkedin](https://www.linkedin.com/in/janemzwangnj)|[GitHub](https://github.com/janemzwangnj/onlineThriftShop)|[Website](https://jane-thriftshop.surge.sh/)|[Trello](https://trello.com/b/ckEhoG2u/onlinethriftshop) --- !>
 
 ---
 
